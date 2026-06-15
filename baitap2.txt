@@ -1,0 +1,33 @@
+Các nguyên tắc đã áp dụng
+Clean Code: tên biến rõ nghĩa, dễ đọc.
+Single Responsibility: hàm calculate_bonus() chỉ làm một việc là tính thưởng.
+Exception Handling: xử lý riêng IndexError và ValueError.
+Fault Tolerance: lỗi của một tuyển thủ không làm sập toàn bộ hệ thống.
+Debugging Support: có thể bật dòng print("Đang xử lý:", record) để xác định bản ghi lỗi nhanh
+
+
+tên cũ: ds, p, t, m, r, b
+tên mới: player_records, record, name, matches, mmr, bonus
+
+
+Trong Python, một tuple được truy cập bằng chỉ số (index):
+
+p[0] → phần tử đầu tiên
+
+p[1] → phần tử thứ hai
+
+p[2] → phần tử thứ ba
+
+Code hiện tại:
+
+Với "Levi"
+
+Dữ liệu:
+
+Tuple này có 3 phần tử, nên p[2] hợp lệ và chương trình chạy bình thường.
+
+Với "SofM"
+
+Dữ liệu
+
+Tuple này chỉ có 2 phần tử Không tồn tại phần tử ở vị trí 2. Khi Python cố đọc p[2], nó phát sinh lỗi
